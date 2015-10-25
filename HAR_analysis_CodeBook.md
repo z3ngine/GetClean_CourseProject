@@ -15,17 +15,17 @@ Specificallly this project seeks to generate a tidy subset of the HAR dataset, c
 The raw data was downloaded from the share https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzipped to the current R working directory.  There is also a function [download.HAR.source()] provided in [run_analysis.R] for downloading the raw data.  For the original data descriptions and raw data, including change notes, see http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ###Notes on the original (raw) data 
-The raw data contains 2 data groups: test and training datasets (oriented towards predictive analytics).  Each data group contains 3 data files:
-	X_&lt;datagroup&gt;.txt - the 561 features recorded
-	Y_&lt;datagroup&gt;.txt - the activity id for each row in X_&lt;datagroup>.txt
-	&lt;datagroup&gt;_subject.txt - the test subject (smartphone user) for each row in X_&lt;datagroup&gt;.txt
-	
-The raw data also contains descriptive files:
-	activity_labels.txt - the label associated with each activity id in the Y_&lt;datagroup&gt;.txt file
-	features.txt - the descriptive label for each column shown in X_&lt;datagroup&gt;.txt file
-	features_info.txt - more explanatory notes about each feature
-	README.txt - background information on the study and contents of the HAR data
-
+The raw data contains 2 data groups: test and training datasets (oriented towards predictive analytics).  Each data group contains 3 data files:<br/>
+ -	X_&lt;datagroup&gt;.txt - the 561 features recorded<br/>
+ -	Y_&lt;datagroup&gt;.txt - the activity id for each row in X_&lt;datagroup>.txt<br/>
+ -	&lt;datagroup&gt;_subject.txt - the test subject (smartphone user) for each row in X_&lt;datagroup&gt;.txt<br/>
+	<br/>
+The raw data also contains descriptive files:<br/>
+ -	activity_labels.txt - the label associated with each activity id in the Y_&lt;datagroup&gt;.txt file<br/>
+ -	features.txt - the descriptive label for each column shown in X_&lt;datagroup&gt;.txt file<br/>
+ -	features_info.txt - more explanatory notes about each feature<br/>
+ -	README.txt - background information on the study and contents of the HAR data<br/>
+<br/>
 For the purposes of this project, all of the above 2 datasets were merged to give the complete sample set recorded.  The raw data also contains raw "Interial Signals" not used in this project.
 
 ##Creating the tidy datafile
@@ -44,11 +44,11 @@ This will source the HAR raw data and extract to a folder "UCI HAR Dataset" in t
 > HAR.Mean.StdDeviation.All <- prepare.Mean.StdDeviation.HAR()
 
 ###Cleaning of the data
-Of the 561 features recorded in the original HAR dataset, this project extracts 66 features only based on the naming convention of the feature name containing the text "mean()" or "std()".  The code deliberately excludes the following features as non "true" mean or standard deviation measures, or because they are derivative measures of the base mean and standard deviation measures:
- - meanFreq() - represents a weighted average and not a true mean
- - angle() variables such as angle(X,gravityMean) - these are on-processed measures representing an angle between 2 "true" mean variables or a "true" mean and another variable. 
+Of the 561 features recorded in the original HAR dataset, this project extracts 66 features only based on the naming convention of the feature name containing the text "mean()" or "std()".  The code deliberately excludes the following features as non "true" mean or standard deviation measures, or because they are derivative measures of the base mean and standard deviation measures:<br/>
+ - meanFreq() - represents a weighted average and not a true mean<br/>
+ - angle() variables such as angle(X,gravityMean) - these are on-processed measures representing an angle between 2 "true" mean variables or a "true" mean and another variable. <br/>
 
-For fast analysis, but also with reference back to the source data, both the activity_id and activity_name are included in the tidy data.  There is no further data available on the subject for each sample so only the subject_id is returned. 
+For fast analysis, but also with reference back to the source data, both the activity_id and activity_name are included in the tidy data.  There is no further data available on the subject for each sample so only the subject_id is returned.<br/> 
  
 Further information relating to the transform functions can be found [in the project's README file](README.md)
 
@@ -67,7 +67,7 @@ Measures are represented by 2 units of measure against the convention in the nam
 	"Gyro." - angular velocity measured in radians/second "rad/s"<br/>
 <br/>
 ###Variables - detailed
-                                              <br/>   
+
  [4] "Time.Body.Acceleration.Mean.X"<br/>
 	class: Numeric<br/>
 	unit of measure: "g" <br/>
