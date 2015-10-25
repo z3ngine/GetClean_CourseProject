@@ -7,21 +7,35 @@ output:
     keep_md: yes
 ---
 
-## Project Description
-Short description of the project
+## GetClean_CourseProject
+Course Project for the John Hopkins university Getting and Cleaning Data course.  This project uses data sourced from the "Human Activity Recognition Using Smartphones Dataset" (HAR dataset), containing data recorded by Smartphones, attempting to describe the users' activity.  See http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones for more information.
+
+Specificallly this project seeks to generate a tidy subset of the HAR dataset, containing only key information along with mean and standard deviation over base measures (from the larger set of 561 features/analyses recorded in the original dataset).
 
 ##Study design and data processing
 
 ###Collection of the raw data
-Description of how the data was collected.
+The raw data was downloaded from the share https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzipped to the current R working directory.  There is also a function [download.HAR.source()] provided in [run_analysis.R] for downloading the raw data.  For the original data descriptions and raw data, including change notes, see http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ###Notes on the original (raw) data 
-Some additional notes (if avaialble, otherwise you can leave this section out).
+The raw data contains both test and training data sets (oriented towards predictive analytics) - for the purposes of this project, the 2 datasets were merged to give the complete sample set recorded.  The raw data also contains raw "Interial Signals" not used in this project.
 
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
-Description on how to create the tidy data file (1. download the data, ...)/
+Download the associated run_analysis.R source code to the R working directory and load into memory
+
+> source("run_analysis.R")
+
+The user can either download from the URL above and unzip the raw data to the current R working directory; or use the function provided:
+
+> download.HAR.source()
+
+This will source the HAR raw data and extract to a folder "UCI HAR Dataset" in the current working directory.  To create the initial tidy data set, containing only key information and the mean & standard deviation measures assign a new dataframe variable to the prepare.Mean.SStdDeviation.HAR() function:
+
+> HAR.Mean.StdDeviation.All <- prepare.Mean.StdDeviation.HAR()
+
+
 
 ###Cleaning of the data
 Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()
