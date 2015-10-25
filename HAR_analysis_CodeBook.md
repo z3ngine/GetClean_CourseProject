@@ -60,7 +60,15 @@ The tidy data is dimensioned by the keys:<br/>
 <br/>
 The measures from the HAR dataset have had their identifying names cleansed to fit a naming convention:<br/>
 	Time. -  measures were recorded<br/>
-	Frequency. <br/>
+	Frequency. - measures have been passed through a Fast Fourier Transform to generate frequency domain signals<br/>
+	<br/>
+	Body. -  measures were recorded against the smartphone<br/>
+	Gravity. - measures were recorded as against gravity<br/>
+	<br/>
+	Jerk. -  "the body linear acceleration and angular velocity were derived in time to obtain Jerk signals"<br/>
+	Magnitude. - "the magnitude of these three-dimensional signals were calculated using the Euclidean norm"<br/>
+	<br/>
+	.X/.Y/.Z - measures taken over an axial direction X, Y or Z axis<br/>
 	<br/>
 Measures are represented by 2 units of measure against the convention in the naming.  For measure names containing the text:<br/>
 	"Acceleration." - measured in standard gravity units "g"<br/>
