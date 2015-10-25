@@ -91,10 +91,10 @@ prepare.Mean.StdDeviation.HAR <- function(){
   		    grepl("subject_id|activity_id|activity_name|(\\.Mean|\\.StdDeviation)$|\\.Mean\\.|\\.StdDeviation\\.",
   		          Test.names)]
   		
-  #		trim to only Mean and StdDeviation columns
+  #	trim to only Mean and StdDeviation columns
   		Test.Narrow <- subset(Test.Raw.Activity, select=Test.names.filter)
   
-  #		deallocate memory for raw sets
+  #	deallocate memory for raw sets
   		rm(Test.Raw)
   		rm(Test.Raw.Activity)
 
@@ -129,10 +129,10 @@ prepare.Mean.StdDeviation.HAR <- function(){
   		  grepl("subject_id|activity_id|activity_name|(\\.Mean|\\.StdDeviation)$|\\.Mean\\.|\\.StdDeviation\\.",
   		        Train.names)]
   		
-  #		trim to only Mean and StdDeviation columns
+  #	trim to only Mean and StdDeviation columns
   		Train.Narrow <- subset(Train.Raw.Activity, select=Train.names.filter)
   		
-  #		deallocate memory for raw sets
+  #	deallocate memory for raw sets
   		rm(Train.Raw)
   		rm(Train.Raw.Activity)
 
