@@ -2,9 +2,6 @@
 title: "Codebook"
 author: "Angus Fry"
 date: "25th Oct 2015"
-output:
-  html_document:
-    keep_md: yes
 ---
 
 ## GetClean_CourseProject
@@ -47,36 +44,293 @@ This will source the HAR raw data and extract to a folder "UCI HAR Dataset" in t
 > HAR.Mean.StdDeviation.All <- prepare.Mean.StdDeviation.HAR()
 
 ###Cleaning of the data
-The HAR 
+Of the 561 features recorded in the original HAR dataset, this project extracts 66 features only based on the naming convention of the feature name containing the text "mean()" or "std()".  The code deliberately excludes the following features as non "true" mean or standard deviation measures, or because they are derivative measures of the base mean and standard deviation measures:
+ - meanFreq() - represents a weighted average and not a true mean
+ - angle() variables such as angle(X,gravityMean) - these are on-processed measures representing an angle between 2 "true" mean variables or a "true" mean and another variable. 
 
-Of the 561 features recorded in the original HAR dataset, this project extracts 66 features only
+For fast analysis, but also with reference back to the source data, both the activity_id and activity_name are included in the tidy data.  There is no further data available on the subject for each sample so only the subject_id is returned. 
+ 
+Further information relating to the transform functions can be found [in the project's README file](README.md)
 
- [link to the readme document that describes the code in greater detail](README.md)
+##Description of the variables returned by prepare.Mean.StdDeviation.HAR()
+The tidy data is dimensioned by the keys:
+ [1] "activity_id" - the raw activity_id from the HAR data (ranges from 1 - 6)                                                 
+ [2] "activity_name" - the lookup value for the specific activity (eg. WALKING, STANDING...)                                           
+ [3] "subject_id" - an id identifying the subject/user (ranges from 1 - 30)
 
-##Description of the variables in the tiny_data.txt file
-General description of the file including:
- - Dimensions of the dataset
- - Summary of the data
- - Variables present in the dataset
+The measures from the HAR dataset have had their identifying names cleansed to fit a naming convention:
+	Time. -  measures were recorded
+	Frequency. 
+	
+Measures are represented by 2 units of measure against the convention in the naming.  For measure names containing the text:
+	"Acceleration." - measured in standard gravity units "g"
+	"Gyro." - angular velocity measured in radians/second "rad/s"
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
-
-###Variable 1 (repeat this section for all variables in the dataset)
-Short description of what the variable describes.
-
-Some information on the variable including:
- - Class of the variable
- - Unique values/levels of the variable
- - Unit of measurement (if no unit of measurement list this as well)
- - In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels). 
-
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
-
-####Notes on variable 1:
-If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
-
-##Sources
-Sources you used if any, otherise leave out.
+###Variables - detailed
+                                                 
+ [4] "Time.Body.Acceleration.Mean.X"
+	class: Numeric
+	unit of measure: "g" 
+ 
+ [5] "Time.Body.Acceleration.Mean.Y"
+	class: Numeric
+	unit of measure: "g" 
+ 
+ [6] "Time.Body.Acceleration.Mean.Z"
+	class: Numeric
+	unit of measure: "g" 
+                                                    
+ [7] "Time.Body.Acceleration.StdDeviation.X"
+	class: Numeric
+	unit of measure: "g" 
+                                              
+ [8] "Time.Body.Acceleration.StdDeviation.Y"
+	class: Numeric
+	unit of measure: "g" 
+                                             
+ [9] "Time.Body.Acceleration.StdDeviation.Z"
+	class: Numeric
+	unit of measure: "g" 
+                                              
+[10] "Time.Gravity.Acceleration.Mean.X"
+	class: Numeric
+	unit of measure: "g" 
+                                                    
+[11] "Time.Gravity.Acceleration.Mean.Y"
+	class: Numeric
+	unit of measure: "g" 
+                                                   
+[12] "Time.Gravity.Acceleration.Mean.Z"
+	class: Numeric
+	unit of measure: "g" 
+                                                  
+[13] "Time.Gravity.Acceleration.StdDeviation.X"
+	class: Numeric
+	unit of measure: "g" 
+                                            
+[14] "Time.Gravity.Acceleration.StdDeviation.Y"
+	class: Numeric
+	unit of measure: "g" 
+                                           
+[15] "Time.Gravity.Acceleration.StdDeviation.Z"
+	class: Numeric
+	unit of measure: "g" 
+                                           
+[16] "Time.Body.Acceleration.Jerk.Mean.X"
+	class: Numeric
+	unit of measure: "g" 
+                                               
+[17] "Time.Body.Acceleration.Jerk.Mean.Y"
+	class: Numeric
+	unit of measure: "g" 
+                        
+[18] "Time.Body.Acceleration.Jerk.Mean.Z"
+	class: Numeric
+	unit of measure: "g" 
+    
+[19] "Time.Body.Acceleration.Jerk.StdDeviation.X"
+	class: Numeric
+	unit of measure: "g" 
+ 
+[20] "Time.Body.Acceleration.Jerk.StdDeviation.Y"
+	class: Numeric
+	unit of measure: "g" 
+ 
+[21] "Time.Body.Acceleration.Jerk.StdDeviation.Z" 
+	class: Numeric
+	unit of measure: "g" 
+ 
+[22] "Time.Body.Gyro.Mean.X"
+	class: Numeric
+	unit of measure: "rad/s" 
+ 
+[23] "Time.Body.Gyro.Mean.Y"
+	class: Numeric
+	unit of measure: "rad/s" 
+                                        
+[24] "Time.Body.Gyro.Mean.Z"
+	class: Numeric
+	unit of measure: "rad/s" 
+                                        
+[25] "Time.Body.Gyro.StdDeviation.X"
+	class: Numeric
+	unit of measure: "rad/s" 
+                                
+[26] "Time.Body.Gyro.StdDeviation.Y"
+	class: Numeric
+	unit of measure: "rad/s" 
+                                
+[27] "Time.Body.Gyro.StdDeviation.Z" 
+	class: Numeric
+	unit of measure: "rad/s" 
+                               
+[28] "Time.Body.Gyro.Jerk.Mean.X"
+	class: Numeric
+	unit of measure: "rad/s" 
+                                   
+[29] "Time.Body.Gyro.Jerk.Mean.Y"
+	class: Numeric
+	unit of measure: "rad/s" 
+                                   
+[30] "Time.Body.Gyro.Jerk.Mean.Z"
+	class: Numeric
+	unit of measure: "rad/s" 
+                                   
+[31] "Time.Body.Gyro.Jerk.StdDeviation.X"
+	class: Numeric
+	unit of measure: "rad/s" 
+                           
+[32] "Time.Body.Gyro.Jerk.StdDeviation.Y"
+	class: Numeric
+	unit of measure: "rad/s" 
+                           
+[33] "Time.Body.Gyro.Jerk.StdDeviation.Z" 
+	class: Numeric
+	unit of measure: "rad/s" 
+                          
+[34] "Time.Body.Acceleration.Magnitude.Mean"      
+	class: Numeric
+	unit of measure: "g" 
+                   
+[35] "Time.Body.Acceleration.Magnitude.StdDeviation"  
+	class: Numeric
+	unit of measure: "g" 
+               
+[36] "Time.Gravity.Acceleration.Magnitude.Mean"   
+	class: Numeric
+	unit of measure: "g" 
+                    
+[37] "Time.Gravity.Acceleration.Magnitude.StdDeviation"    
+	class: Numeric
+	unit of measure: "g" 
+           
+[38] "Time.Body.Acceleration.Jerk.Magnitude.Mean"   
+	class: Numeric
+	unit of measure: "g" 
+                 
+[39] "Time.Body.Acceleration.Jerk.Magnitude.StdDeviation"   
+	class: Numeric
+	unit of measure: "g" 
+         
+[40] "Time.Body.Gyro.Magnitude.Mean" 
+	class: Numeric
+	unit of measure: "rad/s" 
+                               
+[41] "Time.Body.Gyro.Magnitude.StdDeviation"  
+	class: Numeric
+	unit of measure: "rad/s" 
+                      
+[42] "Time.Body.Gyro.Jerk.Magnitude.Mean" 
+	class: Numeric
+	unit of measure: "rad/s" 
+                          
+[43] "Time.Body.Gyro.Jerk.Magnitude.StdDeviation"         
+	class: Numeric
+	unit of measure: "rad/s" 
+          
+[44] "Frequency.Body.Acceleration.Mean.X" 
+	class: Numeric
+	unit of measure: "g" 
+                           
+[45] "Frequency.Body.Acceleration.Mean.Y"  
+	class: Numeric
+	unit of measure: "g" 
+                          
+[46] "Frequency.Body.Acceleration.Mean.Z"  
+	class: Numeric
+	unit of measure: "g" 
+                          
+[47] "Frequency.Body.Acceleration.StdDeviation.X"   
+	class: Numeric
+	unit of measure: "g" 
+                 
+[48] "Frequency.Body.Acceleration.StdDeviation.Y"  
+	class: Numeric
+	unit of measure: "g" 
+                 
+[49] "Frequency.Body.Acceleration.StdDeviation.Z"  
+	class: Numeric
+	unit of measure: "g" 
+                  
+[50] "Frequency.Body.Acceleration.Jerk.Mean.X"  
+	class: Numeric
+	unit of measure: "g" 
+                     
+[51] "Frequency.Body.Acceleration.Jerk.Mean.Y"  
+	class: Numeric
+	unit of measure: "g" 
+                     
+[52] "Frequency.Body.Acceleration.Jerk.Mean.Z"  
+	class: Numeric
+	unit of measure: "g" 
+                     
+[53] "Frequency.Body.Acceleration.Jerk.StdDeviation.X"   
+	class: Numeric
+	unit of measure: "g" 
+            
+[54] "Frequency.Body.Acceleration.Jerk.StdDeviation.Y" 
+	class: Numeric
+	unit of measure: "g" 
+              
+[55] "Frequency.Body.Acceleration.Jerk.StdDeviation.Z"  
+	class: Numeric
+	unit of measure: "g" 
+             
+[56] "Frequency.Body.Gyro.Mean.X"    
+	class: Numeric
+	unit of measure: "rad/s" 
+                               
+[57] "Frequency.Body.Gyro.Mean.Y" 
+	class: Numeric
+	unit of measure: "rad/s" 
+                                  
+[58] "Frequency.Body.Gyro.Mean.Z" 
+	class: Numeric
+	unit of measure: "rad/s" 
+                                  
+[59] "Frequency.Body.Gyro.StdDeviation.X"  
+	class: Numeric
+	unit of measure: "rad/s" 
+                         
+[60] "Frequency.Body.Gyro.StdDeviation.Y"  
+	class: Numeric
+	unit of measure: "rad/s" 
+                         
+[61] "Frequency.Body.Gyro.StdDeviation.Z" 
+	class: Numeric
+	unit of measure: "rad/s" 
+                          
+[62] "Frequency.Body.Acceleration.Magnitude.Mean"    
+	class: Numeric
+	unit of measure: "g" 
+                
+[63] "Frequency.Body.Acceleration.Magnitude.StdDeviation"   
+	class: Numeric
+	unit of measure: "g" 
+         
+[64] "Frequency.Body.Body.Acceleration.Jerk.Magnitude.Mean"   
+	class: Numeric
+	unit of measure: "g" 
+       
+[65] "Frequency.Body.Body.Acceleration.Jerk.Magnitude.StdDeviation" 
+	class: Numeric
+	unit of measure: "g" 
+ 
+[66] "Frequency.Body.Body.Gyro.Magnitude.Mean"  
+	class: Numeric
+	unit of measure: "rad/s" 
+                    
+[67] "Frequency.Body.Body.Gyro.Magnitude.StdDeviation" 
+	class: Numeric
+	unit of measure: "rad/s" 
+             
+[68] "Frequency.Body.Body.Gyro.Jerk.Magnitude.Mean" 
+	class: Numeric
+	unit of measure: "rad/s" 
+                
+[69] "Frequency.Body.Body.Gyro.Jerk.Magnitude.StdDeviation"
+	class: Numeric
+	unit of measure: "rad/s" 
 
 ##Other
 
@@ -84,3 +338,4 @@ To create a summarised version of the tidy data frame, showing the average of ea
 
 > Mean.of.HAR <- prepare.Mean.Summary.HAR(HAR.Mean.StdDeviation.All)
 
+This dataset will return 180 rows in total representing the means covering 30 subjects across 6 activities.  For each of the measures in the tidy dataset from prepare.Mean.StdDeviation.HAR(), prepare.Mean.Summary.HAR() will append "Mean.of." to the column name to identify it is the mean of all observations.
