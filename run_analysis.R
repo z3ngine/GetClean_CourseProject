@@ -34,7 +34,7 @@ prepare.Mean.StdDeviation.HAR <- function(){
   
   #Check for dplyr installed and stop if not
   if(!("dplyr" %in% row.names(installed.packages()))){
-    stop("prepHAR requires the dplyr package.  Please installed dplyr before tyring again.")
+    stop("prepare.Mean.StdDeviation.HAR requires the dplyr package.  Please install dplyr before tyring again.")
   }
   else
     library(dplyr);
@@ -43,7 +43,7 @@ prepare.Mean.StdDeviation.HAR <- function(){
   feature <- read.table(file="UCI HAR Dataset/features.txt",sep = ""
                          , col.names = c("feature_id", "feature_name"))
   
-  #mutate new col with better naming?
+  #Rename features with more descriptive labels
   feature <- mutate(feature, feature_clean = gsub("^f","Frequency.",feature$feature_name))
   feature$feature_clean <- gsub("^t","Time.",feature$feature_clean)
   feature$feature_clean <- gsub("Body","Body.",feature$feature_clean)
@@ -160,7 +160,7 @@ prepare.Mean.Summary.HAR <- function(HAR.Mean.StdDeviation.All){
   
   #Check for dplyr installed and stop if not
   if(!("dplyr" %in% row.names(installed.packages()))){
-    stop("prepHAR requires the dplyr package.  Please installed dplyr before tyring again.")
+    stop("prepare.Mean.Summary.HAR requires the dplyr package.  Please install dplyr before tyring again.")
   }
   else
     library(dplyr);
