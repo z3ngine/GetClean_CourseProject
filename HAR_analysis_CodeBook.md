@@ -18,7 +18,18 @@ Specificallly this project seeks to generate a tidy subset of the HAR dataset, c
 The raw data was downloaded from the share https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzipped to the current R working directory.  There is also a function [download.HAR.source()] provided in [run_analysis.R] for downloading the raw data.  For the original data descriptions and raw data, including change notes, see http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ###Notes on the original (raw) data 
-The raw data contains both test and training data sets (oriented towards predictive analytics) - for the purposes of this project, the 2 datasets were merged to give the complete sample set recorded.  The raw data also contains raw "Interial Signals" not used in this project.
+The raw data contains 2 data groups: test and training datasets (oriented towards predictive analytics).  Each data group contains 3 data files:
+	X_<datagroup>.txt - the 561 features recorded
+	Y_<datagroup>.txt - the activity id for each row in X_<datagroup>.txt
+	<datagroup>_subject.txt - the test subject (smartphone user) for each row in X_<datagroup>.txt
+	
+The raw data also contains descriptive files:
+	activity_labels.txt - the label associated with each activity id in the Y_<datagroup>.txt file
+	features.txt - the descriptive label for each column shown in X_<datagroup>.txt file
+	features_info.txt - more explanatory notes about each feature
+	README.txt - background information on the study and contents of the HAR data
+
+For the purposes of this project, all of the above 2 datasets were merged to give the complete sample set recorded.  The raw data also contains raw "Interial Signals" not used in this project.
 
 ##Creating the tidy datafile
 
@@ -35,10 +46,12 @@ This will source the HAR raw data and extract to a folder "UCI HAR Dataset" in t
 
 > HAR.Mean.StdDeviation.All <- prepare.Mean.StdDeviation.HAR()
 
-
-
 ###Cleaning of the data
-Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()
+The HAR 
+
+Of the 561 features recorded in the original HAR dataset, this project extracts 66 features only
+
+ [link to the readme document that describes the code in greater detail](README.md)
 
 ##Description of the variables in the tiny_data.txt file
 General description of the file including:
@@ -65,5 +78,9 @@ If available, some additional notes on the variable not covered elsewehere. If n
 ##Sources
 Sources you used if any, otherise leave out.
 
-##Annex
-If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
+##Other
+
+To create a summarised version of the tidy data frame, showing the average of each measure observed, feed the dataframe variable generated from prepare.Mean.StdDeviation.HAR() back into the prepare.Mean.Summary.HAR() function, and assign to a new dataframe variable:
+
+> Mean.of.HAR <- prepare.Mean.Summary.HAR(HAR.Mean.StdDeviation.All)
+

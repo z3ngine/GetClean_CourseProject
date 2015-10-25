@@ -48,7 +48,7 @@ prepare.Mean.StdDeviation.HAR <- function(){
   feature$feature_clean <- gsub("^t","Time.",feature$feature_clean)
   feature$feature_clean <- gsub("Body","Body.",feature$feature_clean)
   feature$feature_clean <- gsub("Gyro","Gyro.",feature$feature_clean)
-  feature$feature_clean <- gsub("gravity","Gravity.",feature$feature_clean)
+  feature$feature_clean <- gsub("Gravity","Gravity.",feature$feature_clean)
   feature$feature_clean <- gsub("Acc","Acceleration.",feature$feature_clean)
   feature$feature_clean <- gsub("Jerk","Jerk.",feature$feature_clean)
   feature$feature_clean <- gsub("Mag","Magnitude.",feature$feature_clean)
@@ -62,7 +62,7 @@ prepare.Mean.StdDeviation.HAR <- function(){
                          , col.names = c("activity_id", "activity_name"))
   
   #Test Dataset
-  #	read in X	name cols using feature_clean
+  # read in X	name cols using feature_clean
   		Test.X.Raw <- read.table(file="UCI HAR Dataset/test/X_test.txt",sep = "", 
   		                         col.names = feature$feature_clean)
 	#	read in Y
@@ -136,7 +136,7 @@ prepare.Mean.StdDeviation.HAR <- function(){
   		rm(Train.Raw)
   		rm(Train.Raw.Activity)
 
-	#	Combine Test and Training Sets
+  #	Combine Test and Training Sets
   HAR.Mean.StdDeviation.All <- bind_rows(Test.Narrow, Train.Narrow)
   
   rm(Test.Narrow)
