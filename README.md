@@ -24,7 +24,7 @@ Reads the test and training HAR datasets from the extracted HAR dataset in the c
 
 > HAR.Mean.StdDeviation.All <- prepare.Mean.StdDeviation.HAR()
 
-The function will return a tidy dataframe containing 69 columns [click here for a description of the columns and transformations involved](HAR_analysis_CodeBook.md) and 10,299 rows representing the full set of observations.  The function requires the "dplyr" package to be installed.  If "dplyr" is not available you will received a warning message.
+The function will return a tidy dataframe containing 69 columns \([click here for a description of the columns and transformations involved](HAR_analysis_CodeBook.md)\) and 10,299 rows representing the full set of observations.  The function requires the "dplyr" package to be installed.  If "dplyr" is not available you will received a warning message.
 
 ### prepare.Mean.Summary.HAR()
 Creates a summarised version of the tidy data frame, showing the average of each measure observed.  It takes 1 parameter being the dataframe variable generated from running prepare.Mean.StdDeviation.HAR()
@@ -37,6 +37,6 @@ The function requires the "dplyr" package to be installed.  If "dplyr" is not av
 
 ### save.HAR(dataframe, filePath)
 A quick function for saving the resulting data frame to file/disk.  It accepts 2 parameters:<br/>
- /- <i>dataframe</i> - a data frame variable
- /- <i>filePath</i> - the full or referntial path to the file to be saved to<br/>
+ \- <i>dataframe</i> - a data frame variable<br/>
+ \- <i>filePath</i> - the full or referntial path to the file to be saved to<br/>
  example usage: save.HAR(Mean.of.HAR, "HAR_Mean_of_Mean_StdDeviation_All.txt")
