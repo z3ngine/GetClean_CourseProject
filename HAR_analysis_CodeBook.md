@@ -54,8 +54,8 @@ Further information relating to the transform functions can be found [in the pro
 
 ##Description of the variables returned by prepare.Mean.StdDeviation.HAR()
 The tidy data is dimensioned by the keys:<br/>
- [1] "activity_id" - the raw activity_id from the HAR data (ranges from 1 - 6)  <br/>                                               
- [2] "activity_name" - the lookup value for the specific activity (eg. WALKING, STANDING...) <br/>                                          
+ [1] "activity_id" - the raw activity_id from the HAR data (ranges from 1 - 6)  <br/>   
+ [2] "activity_name" - the lookup value for the specific activity (eg. WALKING, STANDING...) <br/>  
  [3] "subject_id" - an id identifying the subject/user (ranges from 1 - 30)<br/>
 <br/>
 The measures from the HAR dataset have had their identifying names cleansed to fit a naming convention:<br/>
@@ -69,268 +69,268 @@ Measures are represented by 2 units of measure against the convention in the nam
 ###Variables - detailed
 
  [4] "Time.Body.Acceleration.Mean.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
  <br/>
  [5] "Time.Body.Acceleration.Mean.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
  <br/>
  [6] "Time.Body.Acceleration.Mean.Z"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>                      
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>  
  [7] "Time.Body.Acceleration.StdDeviation.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>                
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>
  [8] "Time.Body.Acceleration.StdDeviation.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>               
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>   
  [9] "Time.Body.Acceleration.StdDeviation.Z"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>                
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>
 [10] "Time.Gravity.Acceleration.Mean.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>                      
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>  
 [11] "Time.Gravity.Acceleration.Mean.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>                     
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/> 
 [12] "Time.Gravity.Acceleration.Mean.Z"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>                    
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>
 [13] "Time.Gravity.Acceleration.StdDeviation.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>              
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>  
 [14] "Time.Gravity.Acceleration.StdDeviation.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>             
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/> 
 [15] "Time.Gravity.Acceleration.StdDeviation.Z"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>             
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/> 
 [16] "Time.Body.Acceleration.Jerk.Mean.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                              <br/>                 
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/> 
 [17] "Time.Body.Acceleration.Jerk.Mean.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                        <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+<br/>
 [18] "Time.Body.Acceleration.Jerk.Mean.Z"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-    <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+<br/>
 [19] "Time.Body.Acceleration.Jerk.StdDeviation.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
  <br/>
 [20] "Time.Body.Acceleration.Jerk.StdDeviation.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
  <br/>
 [21] "Time.Body.Acceleration.Jerk.StdDeviation.Z" <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
  <br/>
 [22] "Time.Body.Gyro.Mean.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
  <br/>
 [23] "Time.Body.Gyro.Mean.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                  <br/>      
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>  
 [24] "Time.Body.Gyro.Mean.Z"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                  <br/>      
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>  
 [25] "Time.Body.Gyro.StdDeviation.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+<br/>
 [26] "Time.Body.Gyro.StdDeviation.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+<br/>
 [27] "Time.Body.Gyro.StdDeviation.Z" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                               <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+   <br/>
 [28] "Time.Body.Gyro.Jerk.Mean.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                  <br/> 
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/> 
 [29] "Time.Body.Gyro.Jerk.Mean.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                  <br/> 
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/> 
 [30] "Time.Body.Gyro.Jerk.Mean.Z"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                  <br/> 
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/> 
 [31] "Time.Body.Gyro.Jerk.StdDeviation.X"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                           <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+   <br/>
 [32] "Time.Body.Gyro.Jerk.StdDeviation.Y"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                           <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+   <br/>
 [33] "Time.Body.Gyro.Jerk.StdDeviation.Z" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                          <br/>
-[34] "Time.Body.Acceleration.Magnitude.Mean"      <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                   <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>
+[34] "Time.Body.Acceleration.Magnitude.Mean"  <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+   <br/>
 [35] "Time.Body.Acceleration.Magnitude.StdDeviation"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-               <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+   <br/>
 [36] "Time.Gravity.Acceleration.Magnitude.Mean"   <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                    <br/>
-[37] "Time.Gravity.Acceleration.Magnitude.StdDeviation"    <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-           <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+<br/>
+[37] "Time.Gravity.Acceleration.Magnitude.StdDeviation"<br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+   <br/>
 [38] "Time.Body.Acceleration.Jerk.Magnitude.Mean"   <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                 <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
 [39] "Time.Body.Acceleration.Jerk.Magnitude.StdDeviation"   <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-         <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
 [40] "Time.Body.Gyro.Magnitude.Mean" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                               <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+   <br/>
 [41] "Time.Body.Gyro.Magnitude.StdDeviation"  <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                      <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>
 [42] "Time.Body.Gyro.Jerk.Magnitude.Mean" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                          <br/>
-[43] "Time.Body.Gyro.Jerk.Magnitude.StdDeviation"         <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-          <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>
+[43] "Time.Body.Gyro.Jerk.Magnitude.StdDeviation" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>
 [44] "Frequency.Body.Acceleration.Mean.X" <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                           <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+   <br/>
 [45] "Frequency.Body.Acceleration.Mean.Y"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                          <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>
 [46] "Frequency.Body.Acceleration.Mean.Z"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                          <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>
 [47] "Frequency.Body.Acceleration.StdDeviation.X"   <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                 <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
 [48] "Frequency.Body.Acceleration.StdDeviation.Y"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                 <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
 [49] "Frequency.Body.Acceleration.StdDeviation.Z"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                  <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>
 [50] "Frequency.Body.Acceleration.Jerk.Mean.X"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                     <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
 [51] "Frequency.Body.Acceleration.Jerk.Mean.Y"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                     <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
 [52] "Frequency.Body.Acceleration.Jerk.Mean.Z"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                     <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
 [53] "Frequency.Body.Acceleration.Jerk.StdDeviation.X"   <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-            <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+<br/>
 [54] "Frequency.Body.Acceleration.Jerk.StdDeviation.Y" <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-              <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+  <br/>
 [55] "Frequency.Body.Acceleration.Jerk.StdDeviation.Z"  <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-             <br/>
-[56] "Frequency.Body.Gyro.Mean.X"    <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                               <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
+[56] "Frequency.Body.Gyro.Mean.X"<br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+   <br/>
 [57] "Frequency.Body.Gyro.Mean.Y" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                  <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>
 [58] "Frequency.Body.Gyro.Mean.Z" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                                  <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>
 [59] "Frequency.Body.Gyro.StdDeviation.X"  <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                         <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+ <br/>
 [60] "Frequency.Body.Gyro.StdDeviation.Y"  <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                         <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+ <br/>
 [61] "Frequency.Body.Gyro.StdDeviation.Z" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                          <br/>
-[62] "Frequency.Body.Acceleration.Magnitude.Mean"    <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-                <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+  <br/>
+[62] "Frequency.Body.Acceleration.Magnitude.Mean"<br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+<br/>
 [63] "Frequency.Body.Acceleration.Magnitude.StdDeviation"   <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-         <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+ <br/>
 [64] "Frequency.Body.Body.Acceleration.Jerk.Magnitude.Mean"   <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
-       <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
+   <br/>
 [65] "Frequency.Body.Body.Acceleration.Jerk.Magnitude.StdDeviation" <br/>
-	class: Numeric<br/>
-	unit of measure: "g" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "g" <br/>
  <br/>
 [66] "Frequency.Body.Body.Gyro.Magnitude.Mean"  <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                    <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+<br/>
 [67] "Frequency.Body.Body.Gyro.Magnitude.StdDeviation" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-             <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+ <br/>
 [68] "Frequency.Body.Body.Gyro.Jerk.Magnitude.Mean" <br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
-                <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
+<br/>
 [69] "Frequency.Body.Body.Gyro.Jerk.Magnitude.StdDeviation"<br/>
-	class: Numeric<br/>
-	unit of measure: "rad/s" <br/>
+ \- class: Numeric<br/>
+ \- unit of measure: "rad/s" <br/>
 <br/>
 ##Other
 
